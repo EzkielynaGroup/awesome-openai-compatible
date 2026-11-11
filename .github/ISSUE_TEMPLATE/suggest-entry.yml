@@ -1,0 +1,44 @@
+name: Suggest an entry
+description: Suggest a compatibility page, conformance tool or tracker.
+title: "Suggest: "
+labels: [suggestion]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link to the page that documents the claim
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Provider Compatibility Notes
+        - Self-Hosted Servers
+        - Translation Layers and SDKs
+        - Conformance and Testing
+        - Trackers and Data
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: One-sentence description of what the page documents
+    validations:
+      required: true
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Are you affiliated with this project or company?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true

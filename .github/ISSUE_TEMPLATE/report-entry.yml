@@ -1,0 +1,30 @@
+name: Report an entry
+description: A link is broken, a page changed, or a description is no longer accurate.
+title: "Report: "
+labels: [report]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry name
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: Problem
+      options:
+        - Broken link
+        - Description no longer matches the linked page
+        - Project archived or discontinued
+        - Does not meet the inclusion criteria
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link to the page or snapshot that shows the problem.
+    validations:
+      required: true
